@@ -1,0 +1,23 @@
+{
+  "name": "finmanager",
+  "private": true,
+  "version": "0.1.0",
+  "packageManager": "pnpm@9.15.4",
+  "scripts": {
+    "dev": "pnpm --parallel --filter @finmanager/api --filter @finmanager/web dev",
+    "build": "pnpm --filter @finmanager/shared build && pnpm --filter @finmanager/api build && pnpm --filter @finmanager/web build",
+    "test": "pnpm --recursive --if-present test",
+    "lint": "pnpm --recursive --if-present lint",
+    "typecheck": "pnpm --recursive --if-present typecheck",
+    "format": "prettier --write ."
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.19.0",
+    "eslint": "^9.19.0",
+    "eslint-config-prettier": "^10.0.1",
+    "globals": "^15.14.0",
+    "prettier": "^3.5.0",
+    "typescript": "^5.7.3",
+    "typescript-eslint": "^8.24.0"
+  }
+}
